@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 0 15px;
+            background: #f4f6f9;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        .buttons {
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            margin-right: 10px;
+            border: none;
+            border-radius: 6px;
+            background: #3498db;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        button:hover {
+            background: #2980b9;
+        }
+        #students-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .card {
+            background: white;
+            padding: 15px 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            border-left: 6px solid #3498db;
+        }
+        .card.excellent {
+            border-left-color: #27ae60;
+            background: #eafaf1;
+        }
+        .card.excellent .name::after {
+            content: " ⭐";
+        }
+        .card .name {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #2c3e50;
+        }
+        .card p {
+            margin: 4px 0;
+            color: #555;
+        }
+        .warning {
+            margin-top: 10px;
+            padding: 6px 10px;
+            background: #fdecea;
+            color: #c0392b;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .status {
+            margin-top: 8px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Мини-система студентов</h1>
+
+    <div class="buttons">
+        <button id="show-all">Показать студентов</button>
+        <button id="show-excellent">Показать только отличников</button>
+    </div>
+
+    <div id="students-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
